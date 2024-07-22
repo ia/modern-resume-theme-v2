@@ -3,3 +3,6 @@
 deploy:
 	docker-compose up
 
+clean:
+	true
+
