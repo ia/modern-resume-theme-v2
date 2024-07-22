@@ -4,5 +4,5 @@ deploy:
 	docker-compose up
 
 clean:
-	true
+	rm -rf _site
 
