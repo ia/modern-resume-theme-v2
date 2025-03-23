@@ -7,6 +7,12 @@
 
 ----
 
+## Disclaimer
+
+This repo contains forked and standalone version of modern-resume-theme - modern-resume-theme-v2. This forked theme has a few additional tweaks & updates since it seems that the original repo has been put on hold.
+
+----
+
 ## Announcements
 
  - **Nov 2020** - Content configuration version 2 released. Added a new more configurable way of adding data to the resume. Add as many content sections as you like in what ever order you want. Currently just *text* and *list* but future categories coming soon.

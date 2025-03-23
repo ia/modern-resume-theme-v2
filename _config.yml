@@ -1,5 +1,5 @@
 # Site
-repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
+repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. ia/modern-resume-theme-v2)
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
 # Content configuration version
@@ -68,15 +68,15 @@ content:
         border: weak  # Value of `weak` will display a weak border below this item. # Any 
                       # other value (or no value) means no border will be displayed
         title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+        link: Link to project (eg. ia.github.io/modern-resume-theme-v2)(optional)
         link_text: Link Text
         additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          - title:  Github page for project (eg. ia/modern-resume-theme-v2)
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
+            url: Link to project (eg. ia/modern-resume-theme-v2)(optional)
+          - title:  Github page for project (eg. ia/modern-resume-theme-v2)
             icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
+            url: Link to project (eg. ia/modern-resume-theme-v2)(optional)
         quote: >
           Short overview of the project (optional)
         description: | # this will include new lines to allow paragraphs
@@ -116,8 +116,8 @@ footer_show_references: true
 # references_title: References on request (Override references text)
 
 # Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
+# theme: modern-resume-theme-v2 (Use this is you are hosting your resume yourself)
+# remote_theme: ia/modern-resume-theme-v2 (Use this if you are hosting your resume on GitHub)
 
 sass:
   sass_dir: _sass

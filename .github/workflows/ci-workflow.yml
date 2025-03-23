@@ -95,14 +95,14 @@ jobs:
       run: |
         gem bump --skip-ci
         NEW_VERSION=$(gem bump --pretend --no-commit | awk '{ print $3 }')
-        sed -i -e "s/modern-resume-theme (${{ steps.vars.outputs.CURRENT_VERSION }})/modern-resume-theme (${NEW_VERSION})/g" ./Gemfile.lock
+        sed -i -e "s/modern-resume-theme-v2 (${{ steps.vars.outputs.CURRENT_VERSION }})/modern-resume-theme-v2 (${NEW_VERSION})/g" ./Gemfile.lock
         git add Gemfile.lock
         git commit --amend --no-edit
     - name: Tag latest version
       run: gem tag --no-push
     - run: git push origin HEAD:${{ github.ref }} --tags
     - name: Build Gem
-      run: gem build modern-resume-theme.gemspec
+      run: gem build modern-resume-theme-v2.gemspec
     - name: Get Release Version
       id: release_version
       run: |
@@ -125,8 +125,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./modern-resume-theme-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
-        asset_name: modern-resume-theme-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
+        asset_path: ./modern-resume-theme-v2-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
+        asset_name: modern-resume-theme-v2-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
         asset_content_type: application/octet-stream
     - name: Create gem credentials
       env:
@@ -141,6 +141,6 @@ jobs:
 
         chmod 0600 ~/.gem/credentials
     - name: Publish Gem to GitHub Packages
-      run: gem push --key github --host https://rubygems.pkg.github.com/sproogen modern-resume-theme-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
+      run: gem push --key github --host https://rubygems.pkg.github.com/ia modern-resume-theme-v2-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
     - name: Publish Gem to Rubygems
-      run: gem push modern-resume-theme-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
+      run: gem push modern-resume-theme-v2-${{ steps.release_version.outputs.RELEASE_VERSION }}.gem
